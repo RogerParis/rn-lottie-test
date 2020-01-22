@@ -14,31 +14,28 @@ import {
   View,
   Text,
   StatusBar,
+  Dimensions,
 } from 'react-native';
 import LottieView from 'lottie-react-native';
+
+const {height, width} = Dimensions.get('window');
 
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView style={{flex: 1}}>
         <View style={{height: 50, backgroundColor: 'yellow'}} />
         <LottieView
-          style={styles.container}
-          source={require('./1711-waves.json')}
+          style={{width: '100%'}}
+          source={require('./6601-snooped.json')}
           autoPlay
           loop
         />
-        <View style={{height: 50, backgroundColor: 'yellow'}} />
+        <View style={{height: 50, backgroundColor: 'red'}} />
       </SafeAreaView>
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 export default App;
