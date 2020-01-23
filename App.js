@@ -20,7 +20,7 @@ import LottieView from 'lottie-react-native';
 
 const {height, width} = Dimensions.get('window');
 
-const App: () => React$Node = () => {
+const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
